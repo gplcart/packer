@@ -1,0 +1,19 @@
+{
+  "name": "gplcart/packer",
+  "type": "gplcart-module",
+  "description": "4D bin packing for GPLCart",
+  "keywords": [
+    "gplcart",
+    "ecommerce",
+    "shopping cart",
+    "gplcart module",
+    "php"
+  ],
+  "license": "GPL-3.0-or-later",
+  "require": {
+    "dvdoug/boxpacker": "2.4.3",
+    "gplcart/composer-module-installer": "*"
+  },
+  "minimum-stability": "dev",
+  "prefer-stable": true
+}

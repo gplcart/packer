@@ -45,7 +45,7 @@
       <div class="help-block">
           <?php echo $this->error('shipping_method'); ?>
         <div class="text-muted">
-            <?php echo $this->text('Assign a <a href="@url">shipping method</a> ID for the box type. You can use either an exact ID or a <a href="@url2">MySql LIKE pattern</a> with <code>%</code> variables. Leave empty to associate with all shipping methods', array('@url' => $this->url('admin/report/shipping'), '@url2' => 'https://dev.mysql.com/doc/refman/5.7/en/pattern-matching.html')); ?>
+            <?php echo $this->text('Assign a <a href="@url">shipping method</a> ID for the box type. Wildcards <code>*</code> and <code>?</code> are supported. Leave empty to allow all shipping methods', array('@url' => $this->url('admin/report/shipping'), '@url2' => 'https://dev.mysql.com/doc/refman/5.7/en/pattern-matching.html')); ?>
         </div>
       </div>
     </div>

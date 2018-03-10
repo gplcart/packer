@@ -6,7 +6,9 @@ Based on the [BoxPacker](https://github.com/dvdoug/BoxPacker) library.
 
 **Installation**
 
-1. Download and extract to `system/modules` manually or using composer `composer require gplcart/packer`. IMPORTANT: If you downloaded the module manually, be sure that the name of extracted module folder doesn't contain a branch/version suffix, e.g `-master`. Rename if needed.
+This module requires 3-d party library which should be downloaded separately. You have to use [Composer](https://getcomposer.org) to download all the dependencies.
+
+1. From your web root directory: `composer require gplcart/packer`. If the module was downloaded and placed into `system/modules` manually, run `composer update` to make sure that all 3-d party files are presented in the `vendor` directory.
 2. Go to `admin/module/list` end enable the module
 3. Grant module specific permissions at `admin/user/role`
 4. Boxes are managed at `admin/settings/box`

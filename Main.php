@@ -58,9 +58,7 @@ class Main
             'type' => 'php',
             'version' => '2.4.3',
             'module' => 'packer',
-            'files' => array(
-                'vendor/autoload.php'
-            )
+            'vendor' => 'dvdoug/boxpacker'
         );
     }
 

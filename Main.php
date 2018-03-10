@@ -12,7 +12,6 @@ namespace gplcart\modules\packer;
 use Exception;
 use gplcart\core\Config;
 use gplcart\core\Container;
-use gplcart\core\Library;
 
 /**
  * Main class for Packer module
@@ -27,19 +26,11 @@ class Main
     protected $db;
 
     /**
-     * Library class instance
-     * @var \gplcart\core\Library $library
-     */
-    protected $library;
-
-    /**
      * Main constructor.
      * @param Config $config
-     * @param Library $library
      */
-    public function __construct(Config $config, Library $library)
+    public function __construct(Config $config)
     {
-        $this->library = $library;
         $this->db = $config->getDb();
         $this->db->addScheme($this->getDbScheme());
     }
@@ -63,35 +54,10 @@ class Main
     }
 
     /**
-     * Implements hook "module.enable.after"
-     */
-    public function hookModuleEnableAfter()
-    {
-        $this->library->clearCache();
-    }
-
-    /**
-     * Implements hook "module.disable.after"
-     */
-    public function hookModuleDisableAfter()
-    {
-        $this->library->clearCache();
-    }
-
-    /**
-     * Implements hook "module.install.after"
-     */
-    public function hookModuleInstallAfter()
-    {
-        $this->library->clearCache();
-    }
-
-    /**
      * Implements hook "module.uninstall.after"
      */
     public function hookModuleUninstallAfter()
     {
-        $this->library->clearCache();
         $this->db->deleteTable('module_packer_boxes');
     }
 
